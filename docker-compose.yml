@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: gestao_escolar_api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o código local no contêiner para live-reloading
+      # O banco de dados SQLite (escola.db) também será salvo no seu diretório local.
+      - ./:/app
